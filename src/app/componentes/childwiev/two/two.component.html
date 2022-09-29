@@ -1,0 +1,19 @@
+<form [formGroup]="pruebaForm" >
+     <p>Form Status: {{ pruebaForm.status }}</p>
+     <p>pruebaInput2 : {{ pruebaForm.get('pruebaInput2')?.errors?.['multiplo5'] }}</p>
+     <p>cruzados soniguales : {{ pruebaForm.errors?.['soniguales'] }}</p>
+
+      <app-myimput formControlName="pruebaInput" [myLabel]="'Label de mi input'">
+      </app-myimput>
+      <input  type="text"  formControlName="pruebaInput2">
+</form>
+
+<app-one>
+
+    <div name = "test"> Soy la primera posición div [name = "test"] </div>
+    <p #i1>two worasssssssssssssssks!</p>
+   <div name = "test"> Soy la primera posición div [name = "test"] 2</div>
+
+</app-one>
+
+

@@ -1,0 +1,27 @@
+<form [formGroup]="formulario"  (ngSubmit)="onSubmit()">
+  <mat-grid-list  cols="2" rowHeight="350px">
+    <mat-grid-tile  [colspan]="cols" [rowspan]="rows">
+      <label for="first-name">First Name: </label>
+      <input id="first-name" type="text" formControlName="firstName">
+    </mat-grid-tile>
+    <mat-grid-tile  [colspan]="cols" [rowspan]="rows">
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" type="text" formControlName="lastName">
+     </mat-grid-tile>
+
+
+     <mat-grid-tile  [colspan]="cols" [rowspan]="rows">
+            <mat-selection-list #shoes [multiple]="false" formControlName="shoeselegido">
+              <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                {{shoe}}
+              </mat-list-option>
+            </mat-selection-list>
+     </mat-grid-tile>
+
+     <mat-grid-tile  [colspan]="cols" [rowspan]="rows">
+      <button type="submit" [disabled]="!formulario.valid">Submit</button>
+   </mat-grid-tile>
+
+
+ </mat-grid-list>
+</form>
