@@ -15,6 +15,10 @@ const routes: Routes = [
      { path: 'grid', component: GridComponent },
      { path: 'apollo', component: Apollop1Component },
      { path: 'one', component: TwoComponent },
+     {
+      path: 'rxjs',
+      loadChildren: () => import('./componentes/rxjscom/rxjscom.module').then(m => m.RxjscomModule)
+    }
 
 ];
 

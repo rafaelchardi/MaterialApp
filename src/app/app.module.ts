@@ -43,7 +43,8 @@ import { InputControlComponent } from './componentes/myimput/myimput.component';
     Apollop1Component,
     OneComponent,
     TwoComponent,
-    InputControlComponent
+    InputControlComponent,
+
   ],
   imports: [
     BrowserModule,

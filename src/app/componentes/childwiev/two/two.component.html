@@ -6,6 +6,8 @@
       <app-myimput formControlName="pruebaInput" [myLabel]="'Label de mi input'">
       </app-myimput>
       <input  type="text"  formControlName="pruebaInput2">
+
+      <button [disabled] = "!pruebaForm.valid" (click)="cli()"> pulsame</button>
 </form>
 
 <app-one>
